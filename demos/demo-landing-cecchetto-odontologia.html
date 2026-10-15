@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ortodoncia y Alineadores en Córdoba | Cecchetto Odontología</title>
+<meta name="description" content="Dra. Cecilia Cecchetto MP 7295. Ortodoncia, alineadores, implantes y prótesis en Av. 24 de Septiembre 842, Córdoba. Pedí tu evaluación por WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#5FB8B5; --teal-d:#3E9A97; --mint:#97E8C7; --peach:#FEE2BC; --coral:#FFA08F;
+  --ink:#3F4448; --gray:#6B7176; --line:#E9EEEE; --bg:#FFFFFF; --soft:#F5FAF9;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.logo{font-family:'Montserrat',sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-d);background:rgba(95,184,181,.12);padding:6px 14px;border-radius:999px;margin-bottom:16px}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;line-height:1.15;margin-bottom:14px;color:#2E3236}
+.lead{font-size:18px;color:var(--gray);max-width:640px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#fff;font-weight:700;padding:15px 28px;border-radius:999px;transition:transform .2s,background .2s;box-shadow:0 10px 24px rgba(95,184,181,.35)}
+.btn:hover{background:var(--teal-d);transform:translateY(-2px)}
+.btn.ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--teal);background:#fff}
+.btn svg{width:20px;height:20px}
+
+/* demo ribbon */
+.demo{background:#2E3236;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
+.demo b{color:var(--mint)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.dots{display:flex;gap:5px;margin-bottom:5px}
+.dots i{width:9px;height:9px;border-radius:50%;display:block}
+.logo b{font-size:20px;font-weight:800;letter-spacing:.04em;color:#5A5F63}
+.logo small{font-size:8.5px;letter-spacing:.18em;color:#9AA0A4;margin-top:4px;font-family:'Nunito Sans',sans-serif}
+.menu{display:flex;gap:28px;font-weight:600;font-size:15px;color:var(--gray)}
+.menu a:hover{color:var(--teal-d)}
+nav .btn{padding:10px 20px;font-size:14px;box-shadow:none}
+
+/* hero */
+.hero{padding:70px 0 90px;background:radial-gradient(circle at 85% 20%,rgba(151,232,199,.35),transparent 40%),radial-gradient(circle at 10% 90%,rgba(254,226,188,.6),transparent 40%),#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(36px,5.2vw,58px);font-weight:800;line-height:1.08;color:#2E3236;letter-spacing:-.01em}
+.hero h1 span{color:var(--teal)}
+.hero p{font-size:19px;color:var(--gray);margin:20px 0 30px;max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:26px;margin-top:36px;flex-wrap:wrap}
+.trust div{font-size:14px;color:var(--gray)}
+.trust b{display:block;font-family:'Montserrat',sans-serif;font-size:24px;color:#2E3236}
+.stars{color:#F5B642;letter-spacing:2px}
+.hero-art{position:relative;aspect-ratio:1/1.05}
+.blob{position:absolute;border-radius:50%}
+.hero-card{position:absolute;inset:8% 6% 10% 10%;background:linear-gradient(160deg,var(--teal),#86D3C7);border-radius:200px 200px 32px 32px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.ph{color:rgba(255,255,255,.85);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:24px}
+.ph svg{width:120px;height:120px;opacity:.9;display:block;margin:0 auto 8px}
+.badge-float{position:absolute;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 18px 40px rgba(46,50,54,.12);display:flex;gap:12px;align-items:center;font-size:14px}
+.badge-float b{font-family:'Montserrat',sans-serif;display:block;font-size:15px;color:#2E3236}
+.badge-float .ic{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px}
+
+/* tratamientos */
+.treat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 24px;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.tcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(46,50,54,.08)}
+.tcard .ic{width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.tcard .ic svg{width:30px;height:30px}
+.tcard h3{font-size:19px;margin-bottom:8px;color:#2E3236}
+.tcard p{font-size:15px;color:var(--gray);flex:1}
+.tcard a{margin-top:18px;font-weight:700;color:var(--teal-d);font-size:14px}
+.general{margin-top:20px;background:var(--soft);border-radius:22px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.general b{font-family:'Montserrat',sans-serif}
+.general span{color:var(--gray)}
+
+/* casos */
+.soft{background:var(--soft)}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.case{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.ba{display:grid;grid-template-columns:1fr 1fr;height:190px}
+.ba div{display:flex;align-items:flex-end;padding:12px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(46,50,54,.55)}
+.ba .a{background:linear-gradient(160deg,#EDEDED,#DADDDD)}
+.ba .d{background:linear-gradient(160deg,var(--mint),var(--teal));color:#fff}
+.case .info{padding:20px 22px}
+.case h3{font-size:17px;margin-bottom:4px}
+.case p{font-size:14px;color:var(--gray)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--peach);color:#9A6A2E;margin-bottom:10px}
+.note{font-size:13px;color:#9AA0A4;margin-top:18px;text-align:center}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(170deg,var(--peach),#FFD3C9);position:relative;display:flex;align-items:center;justify-content:center}
+.portrait .ph{color:rgba(120,80,60,.6)}
+.press{position:absolute;bottom:-22px;right:-18px;background:#2E3236;color:#fff;border-radius:18px;padding:16px 20px;font-size:13px;max-width:230px;box-shadow:0 18px 40px rgba(46,50,54,.25)}
+.press b{display:block;font-family:'Montserrat',sans-serif;font-size:15px;color:var(--mint);margin-bottom:2px}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.cred{border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.cred b{font-family:'Montserrat',sans-serif;color:#2E3236;display:block}
+.cred span{font-size:14px;color:var(--gray)}
+
+/* proceso */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px;position:relative}
+.steps:before{content:'';position:absolute;top:30px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--teal) 0 8px,transparent 8px 16px)}
+.step{text-align:center;position:relative}
+.num{width:60px;height:60px;border-radius:50%;background:#fff;border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:20px;color:var(--teal-d)}
+.step h3{font-size:17px;margin-bottom:6px}
+.step p{font-size:14px;color:var(--gray)}
+
+/* reseñas */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.rev{background:#fff;border-radius:22px;padding:28px;border:1px solid var(--line);display:flex;flex-direction:column}
+.rev p{font-size:15.5px;color:var(--ink);flex:1;margin:12px 0 18px}
+.rev small{color:#9AA0A4;font-size:13px;display:flex;align-items:center;gap:8px}
+.g{width:18px;height:18px}
+.score{display:inline-flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 22px;margin-top:22px}
+.score b{font-family:'Montserrat',sans-serif;font-size:24px}
+
+/* faq */
+.faq{max-width:780px;margin:40px auto 0}
+details{border-bottom:1px solid var(--line);padding:20px 4px}
+summary{cursor:pointer;font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:20px;color:#2E3236}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';color:var(--teal);font-size:24px;line-height:1;transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{color:var(--gray);margin-top:12px;font-size:15.5px}
+
+/* contacto */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.cbox{background:linear-gradient(160deg,var(--teal),#4FA8A5);color:#fff;border-radius:28px;padding:44px}
+.cbox h2{color:#fff}
+.cbox p{opacity:.9}
+.cline{display:flex;gap:14px;align-items:flex-start;margin-top:20px;font-size:16px}
+.cline .i{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:19px}
+.cbox .btn{background:#fff;color:var(--teal-d);margin-top:30px}
+.map{border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:380px}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+
+footer{background:#2E3236;color:#B9BEC2;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .logo b{color:#fff}
+footer a{color:var(--mint)}
+
+.wa-float{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(37,211,102,.45);z-index:30;transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px}
+
+@media(max-width:900px){
+  .menu{display:none}
+  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-art{max-width:420px;margin:0 auto;width:100%}
+  .treat{grid-template-columns:1fr 1fr}
+  .cases,.revs{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .steps:before{display:none}
+  section{padding:64px 0}
+  .press{right:10px}
+}
+@media(max-width:560px){
+  .treat,.steps,.creds{grid-template-columns:1fr}
+  nav .btn span{display:none}
+  .cbox{padding:30px}
+  .badge-float{font-size:12px;padding:10px 12px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">Vista previa de diseño · <b>Demo preparada por Pixel Studio</b> para Cecchetto Odontología</div>
+
+<nav><div class="wrap">
+  <a href="#inicio" class="logo"><span class="dots"><i style="background:var(--peach)"></i><i style="background:var(--mint)"></i><i style="background:var(--teal)"></i><i style="background:var(--coral)"></i></span><b>CECCHETTO</b><small>ORTODONCIA | ODONTOLOGÍA</small></a>
+  <div class="menu"><a href="#tratamientos">Tratamientos</a><a href="#casos">Casos</a><a href="#dra">La Dra.</a><a href="#proceso">Proceso</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></div>
+  <a class="btn" href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Quiero%20pedir%20un%20turno." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span>Pedir turno</span></a>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero" id="inicio"><div class="wrap">
+  <div>
+    <span class="eyebrow">Ortodoncia en Córdoba</span>
+    <h1>Una sonrisa alineada, <span>con quien te explica cada paso.</span></h1>
+    <p>Ortodoncia, alineadores, implantes y prótesis con la Dra. Cecilia Cecchetto. Tratamientos claros, atención cercana y resultados que podés ver en nuestros pacientes.</p>
+    <div class="ctas">
+      <a class="btn" href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Quiero%20pedir%20una%20evaluaci%C3%B3n%20para%20empezar%20un%20tratamiento." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Quiero mi evaluación</a>
+      <a class="btn ghost" href="#tratamientos">Ver tratamientos</a>
+    </div>
+    <div class="trust">
+      <div><b>5,0 <span class="stars">★★★★★</span></b>en Google</div>
+      <div><b>+7.500</b>nos siguen en Instagram</div>
+      <div><b>MP 7295</b>Dra. Cecilia Cecchetto</div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="blob" style="width:44%;aspect-ratio:1;background:var(--peach);top:0;right:0"></div>
+    <div class="blob" style="width:26%;aspect-ratio:1;background:var(--coral);bottom:4%;left:0;opacity:.75"></div>
+    <div class="hero-card"><div class="ph"><svg viewBox="0 0 120 120" fill="none" stroke="#fff" stroke-width="3"><path d="M30 70c8 14 22 22 30 22s22-8 30-22"/><circle cx="60" cy="60" r="50" opacity=".4"/></svg>Foto de la Dra. o del consultorio</div></div>
+    <div class="badge-float" style="top:16%;left:-4%"><div class="ic" style="background:var(--mint)">😁</div><div><b>Alineadores</b>Casi invisibles</div></div>
+    <div class="badge-float" style="bottom:18%;right:-4%"><div class="ic" style="background:var(--peach)">📍</div><div><b>General Paz</b>Av. 24 de Septiembre 842</div></div>
+  </div>
+</div></header>
+
+<!-- TRATAMIENTOS -->
+<section id="tratamientos"><div class="wrap">
+  <div class="center"><span class="eyebrow">Tratamientos</span><h2>Lo que podemos hacer por tu sonrisa</h2><p class="lead">Cada tratamiento empieza con una evaluación para entender tu caso y explicarte, sin tecnicismos, cuál es el mejor camino.</p></div>
+  <div class="treat">
+    <div class="tcard"><div class="ic" style="background:rgba(95,184,181,.15)"><svg viewBox="0 0 32 32" fill="none" stroke="#3E9A97" stroke-width="2.2" stroke-linecap="round"><path d="M4 16h24"/><rect x="6" y="11" width="5" height="10" rx="2"/><rect x="13.5" y="11" width="5" height="10" rx="2"/><rect x="21" y="11" width="5" height="10" rx="2"/></svg></div><h3>Ortodoncia con brackets</h3><p>Corregimos la posición de los dientes y la mordida con brackets metálicos o estéticos, con controles periódicos durante todo el tratamiento.</p><a href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Quiero%20consultar%20por%20ortodoncia%20con%20brackets." target="_blank" rel="noopener">Consultar →</a></div>
+    <div class="tcard"><div class="ic" style="background:rgba(151,232,199,.35)"><svg viewBox="0 0 32 32" fill="none" stroke="#3E9A97" stroke-width="2.2" stroke-linecap="round"><path d="M5 12c0 8 5 13 11 13s11-5 11-13c-4 2-7 3-11 3s-7-1-11-3Z"/></svg></div><h3>Alineadores invisibles</h3><p>Placas transparentes y removibles que mueven tus dientes de forma gradual. Casi no se notan y te las sacás para comer.</p><a href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Quiero%20consultar%20por%20alineadores%20invisibles." target="_blank" rel="noopener">Consultar →</a></div>
+    <div class="tcard"><div class="ic" style="background:rgba(254,226,188,.7)"><svg viewBox="0 0 32 32" fill="none" stroke="#B07A35" stroke-width="2.2" stroke-linecap="round"><path d="M10 4h12c2 0 3 2 2 4l-2 5H10L8 8c-1-2 0-4 2-4Z"/><path d="M13 13v5M19 13v5M12 18h8M13 22h6M14 26h4"/></svg></div><h3>Implantes dentales</h3><p>Reemplazamos piezas perdidas con implantes que se ven y funcionan como un diente natural, para volver a comer y sonreír con confianza.</p><a href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Quiero%20consultar%20por%20implantes%20dentales." target="_blank" rel="noopener">Consultar →</a></div>
+    <div class="tcard"><div class="ic" style="background:rgba(255,160,143,.25)"><svg viewBox="0 0 32 32" fill="none" stroke="#D9705C" stroke-width="2.2" stroke-linecap="round"><path d="M9 6c-3 0-4 3-4 6 0 5 2 14 5 14 2 0 2-7 6-7s4 7 6 7c3 0 5-9 5-14 0-3-1-6-4-6-3 0-4 2-7 2S12 6 9 6Z"/></svg></div><h3>Prótesis</h3><p>Prótesis fijas y removibles para recuperar la estética y la función de tu boca, diseñadas a la medida de cada paciente.</p><a href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Quiero%20consultar%20por%20pr%C3%B3tesis%20dentales." target="_blank" rel="noopener">Consultar →</a></div>
+  </div>
+  <div class="general"><div><b>Odontología general</b> · <span>Limpiezas, controles, arreglos y recambio de restauraciones antiguas por otras más estéticas.</span></div><a class="btn ghost" href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Quiero%20sacar%20un%20turno%20de%20odontolog%C3%ADa%20general%20%28limpieza%20/%20control%29." target="_blank" rel="noopener">Sacar turno</a></div>
+</div></section>
+
+<!-- CASOS -->
+<section class="soft" id="casos"><div class="wrap">
+  <div class="center"><span class="eyebrow">Casos reales</span><h2>Resultados que hablan por nosotros</h2><p class="lead">Muchos de nuestros pacientes decidieron empezar después de ver los resultados de otros. Estos son algunos de ellos.</p></div>
+  <div class="cases">
+    <div class="case"><div class="ba"><div class="a">Antes</div><div class="d">Después</div></div><div class="info"><span class="tag">Ortodoncia</span><h3>Retiro de brackets</h3><p>Alineación completa y corrección de mordida.</p></div></div>
+    <div class="case"><div class="ba"><div class="a">Antes</div><div class="d">Después</div></div><div class="info"><span class="tag">Alineadores</span><h3>Apiñamiento leve</h3><p>Tratamiento con placas transparentes.</p></div></div>
+    <div class="case"><div class="ba"><div class="a">Antes</div><div class="d">Después</div></div><div class="info"><span class="tag">Estética</span><h3>Recambio de arreglos</h3><p>Restauraciones antiguas por otras más estéticas.</p></div></div>
+  </div>
+  <p class="note">En la versión final se usan fotos reales de pacientes, con su autorización. Los resultados varían según cada caso.</p>
+</div></section>
+
+<!-- SOBRE LA DRA -->
+<section class="about" id="dra"><div class="wrap">
+  <div class="portrait"><div class="ph"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3"><circle cx="60" cy="44" r="20"/><path d="M24 104c4-20 18-30 36-30s32 10 36 30"/></svg>Foto de la Dra. Cecilia Cecchetto</div>
+    <div class="press"><b>Nota en El Doce TV</b>Nuestro trabajo también pasó por la televisión de Córdoba.</div></div>
+  <div>
+    <span class="eyebrow">Sobre la Dra.</span>
+    <h2>Dra. Cecilia Cecchetto</h2>
+    <p class="lead">Odontóloga dedicada a la ortodoncia, la odontología general, los implantes y las prótesis. Sus pacientes destacan lo mismo: paciencia, explicaciones claras y el tiempo que le dedica a cada persona.</p>
+    <div class="creds">
+      <div class="cred"><b>MP 7295</b><span>Matrícula profesional</span></div>
+      <div class="cred"><b>5,0 ★ en Google</b><span>Reseñas de pacientes reales</span></div>
+      <div class="cred"><b>Ortodoncia</b><span>Brackets y alineadores</span></div>
+      <div class="cred"><b>Atención integral</b><span>Implantes, prótesis y general</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- PROCESO -->
+<section class="soft" id="proceso"><div class="wrap">
+  <div class="center"><span class="eyebrow">Cómo trabajamos</span><h2>De la primera consulta a tu nueva sonrisa</h2><p class="lead">Sabés en todo momento en qué etapa estás y qué viene después.</p></div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h3>Escribinos</h3><p>Nos contás qué te gustaría mejorar y coordinamos tu turno.</p></div>
+    <div class="step"><div class="num">2</div><h3>Evaluación</h3><p>Revisamos tu caso y te explicamos las opciones de tratamiento.</p></div>
+    <div class="step"><div class="num">3</div><h3>Plan a medida</h3><p>Definimos juntos el tratamiento, los tiempos y la forma de pago.</p></div>
+    <div class="step"><div class="num">4</div><h3>Seguimiento</h3><p>Controles periódicos hasta lograr el resultado que buscás.</p></div>
+  </div>
+</div></section>
+
+<!-- RESEÑAS -->
+<section id="resenas"><div class="wrap">
+  <div class="center"><span class="eyebrow">Opiniones</span><h2>Lo que dicen nuestros pacientes</h2>
+    <div class="score"><b>5,0</b><span class="stars">★★★★★</span><span style="color:var(--gray)">en Google</span></div></div>
+  <div class="revs">
+    <div class="rev"><span class="stars">★★★★★</span><p>“Me convencí de realizarme ortodoncia con ella después de ver los resultados de su trabajo en otros pacientes.”</p><small><svg class="g" viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.6a4.8 4.8 0 0 1-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.5Z"/><path fill="#34A853" d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7A10 10 0 0 0 12 22Z"/><path fill="#FBBC05" d="M6.2 13.6a6 6 0 0 1 0-3.8V7.1H2.7a10 10 0 0 0 0 9.2l3.5-2.7Z"/><path fill="#EA4335" d="M12 6c1.5 0 2.9.5 4 1.6l3-3A10 10 0 0 0 2.7 7.1l3.5 2.7C7 7.8 9.3 6 12 6Z"/></svg>Paciente · Reseña de Google</small></div>
+    <div class="rev"><span class="stars">★★★★★</span><p>“Muy clara en todo el proceso, te explica cada cosa que va haciendo y te da mucha seguridad. ¡Muy recomendable!”</p><small><svg class="g" viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.6a4.8 4.8 0 0 1-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.5Z"/><path fill="#34A853" d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7A10 10 0 0 0 12 22Z"/><path fill="#FBBC05" d="M6.2 13.6a6 6 0 0 1 0-3.8V7.1H2.7a10 10 0 0 0 0 9.2l3.5-2.7Z"/><path fill="#EA4335" d="M12 6c1.5 0 2.9.5 4 1.6l3-3A10 10 0 0 0 2.7 7.1l3.5 2.7C7 7.8 9.3 6 12 6Z"/></svg>Paciente · Reseña de Google</small></div>
+    <div class="rev"><span class="stars">★★★★★</span><p>“Es muy paciente y le dedica el tiempo necesario a cada uno. Yo siempre la recomiendo a mi familia y amigos.”</p><small><svg class="g" viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.6a4.8 4.8 0 0 1-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.5Z"/><path fill="#34A853" d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.7v2.7A10 10 0 0 0 12 22Z"/><path fill="#FBBC05" d="M6.2 13.6a6 6 0 0 1 0-3.8V7.1H2.7a10 10 0 0 0 0 9.2l3.5-2.7Z"/><path fill="#EA4335" d="M12 6c1.5 0 2.9.5 4 1.6l3-3A10 10 0 0 0 2.7 7.1l3.5 2.7C7 7.8 9.3 6 12 6Z"/></svg>Paciente · Reseña de Google</small></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="soft" id="faq"><div class="wrap">
+  <div class="center"><span class="eyebrow">Preguntas frecuentes</span><h2>Lo que más nos preguntan</h2></div>
+  <div class="faq">
+    <details open><summary>¿Cuánto dura un tratamiento de ortodoncia?</summary><p>Depende de cada caso. En la evaluación inicial revisamos tu situación y te damos un tiempo estimado para tu tratamiento.</p></details>
+    <details><summary>¿Qué diferencia hay entre brackets y alineadores?</summary><p>Los brackets van fijos sobre los dientes; los alineadores son placas transparentes y removibles. En la consulta te explicamos cuál conviene para tu caso.</p></details>
+    <details><summary>¿Duele la ortodoncia?</summary><p>Es normal sentir una leve molestia los primeros días después de cada ajuste. Te explicamos qué esperar y cómo llevarlo.</p></details>
+    <details><summary>¿Cada cuánto son los controles?</summary><p>Los controles son periódicos y se coordinan según la etapa de tu tratamiento.</p></details>
+    <details><summary>¿Qué formas de pago tienen?</summary><p>Escribinos por WhatsApp y te contamos las opciones vigentes.</p></details>
+  </div>
+</div></section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto"><div class="wrap">
+  <div class="cbox">
+    <h2>Pedí tu evaluación</h2>
+    <p>Escribinos y coordinamos tu turno. Te respondemos por WhatsApp.</p>
+    <div class="cline"><div class="i">📍</div><div><b>Av. 24 de Septiembre 842</b><br>Barrio General Paz, Córdoba</div></div>
+    <div class="cline"><div class="i">💬</div><div><b>Turnos por WhatsApp</b><br>0351 15-808-7764</div></div>
+    <div class="cline"><div class="i">📸</div><div><b>@cecchettoodontologia</b><br>Seguinos en Instagram</div></div>
+    <a class="btn" href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Vi%20su%20p%C3%A1gina%20y%20quiero%20pedir%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">Quiero mi turno →</a>
+  </div>
+  <div class="map"><iframe loading="lazy" title="Ubicación Cecchetto Odontología" src="https://www.google.com/maps?q=Av.+24+de+Septiembre+842,+C%C3%B3rdoba,+Argentina&output=embed"></iframe></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="logo"><span class="dots"><i style="background:var(--peach)"></i><i style="background:var(--mint)"></i><i style="background:var(--teal)"></i><i style="background:var(--coral)"></i></span><b>CECCHETTO</b><small>ORTODONCIA | ODONTOLOGÍA</small></div>
+  <div>Dra. Cecilia Cecchetto · MP 7295 · Córdoba, Argentina</div>
+  <div>Diseño y desarrollo: <a href="https://wa.me/5493513992666" target="_blank" rel="noopener">Pixel Studio</a></div>
+</div></footer>
+
+<a class="wa-float" href="https://wa.me/5493518087764?text=Hola%20Dra.%20Cecchetto%21%20Quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+
+</body>
+</html>
