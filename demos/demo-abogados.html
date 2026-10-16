@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ledesma & Ortiz · Abogados</title>
+<meta name="description" content="Estudio jurídico: derecho laboral, familia, sucesiones, accidentes de tránsito y daños. Primera consulta.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Sobrio y documental: azul tinta, papel marfil y bronce; serif clásica de libro con versalitas y filetes. */
+:root{--bg:#F7F4EC;--surface:#FFFDF7;--ink:#16213A;--mut:#545C6E;--line:#DDD6C4;--acc:#9A6B2F;--acc-ink:#FFFFFF;--deep:#16213A;--deep-ink:#EFE9DA;--soft:#EEE8D8;
+--fd:'Libre Caslon Text',Georgia,serif;--fb:'Source Sans 3',system-ui,sans-serif;--r:0px;--dw:400;color-scheme:light}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--fd);font-weight:var(--dw);line-height:1.08;text-wrap:balance;letter-spacing:-0.01em}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(64px,9vw,112px)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
+h2{font-size:clamp(30px,4.4vw,50px);margin-bottom:16px}
+.lead{color:var(--mut);font-size:clamp(17px,1.6vw,19px);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:var(--acc-ink);font-weight:600;font-size:15px;padding:15px 26px;border-radius:var(--r);border:1.5px solid var(--acc);transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}
+.btn svg{width:19px;height:19px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -10px var(--acc)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);box-shadow:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+/* demo ribbon */
+.ribbon{background:#111;color:#eee;font:500 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 16px}
+.ribbon a{color:#FF8A5B;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--fd);font-weight:var(--dw);font-size:21px;letter-spacing:-0.01em}
+.mark{width:38px;height:38px;border-radius:0;background:var(--deep);color:var(--deep-ink);display:grid;place-items:center;font-size:17px;flex-shrink:0}
+.brand small{display:block;font-family:var(--fb);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-top:2px}
+.menu{display:flex;gap:28px;font-size:15px;color:var(--mut);font-weight:500}
+.menu a:hover{color:var(--ink)}
+nav .btn{padding:11px 18px;font-size:14px}
+/* hero */
+.hero{padding-block:clamp(48px,7vw,96px);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(38px,5.2vw,64px);margin:6px 0 22px}
+.hero h1 em{font-style:italic;color:var(--acc)}
+.hero p.lead{margin-bottom:32px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:clamp(20px,4vw,44px);margin-top:44px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.stat b{display:block;font-family:var(--fd);font-weight:var(--dw);font-size:clamp(26px,3vw,34px);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--mut)}
+.art{position:relative;aspect-ratio:1/1.08;max-width:100%;border-radius:0;overflow:hidden;background:linear-gradient(180deg,#16213A 0%,#2B3B5E 60%,#9A6B2F 140%);isolation:isolate}
+.art .glyph{position:absolute;inset:0;display:grid;place-items:center;color:var(--deep-ink);opacity:.9}
+.art .glyph svg{width:42%;height:auto;stroke-width:.9}
+.art::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 28px);mix-blend-mode:soft-light;z-index:-1}
+.float{position:absolute;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:calc(var(--r) + 4px);padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 24px 50px -24px rgba(0,0,0,.35);font-size:13px;max-width:240px}
+.float b{display:block;font-size:15px;font-family:var(--fd);font-weight:var(--dw)}
+.float .fi{width:38px;height:38px;border-radius:calc(var(--r) - 2px);background:var(--soft);color:var(--acc);display:grid;place-items:center;flex-shrink:0}
+.f1{top:9%;left:-5%}.f2{bottom:9%;right:-4%}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--mut);background:var(--surface)}
+/* marquee band */
+.band{background:var(--deep);color:var(--deep-ink);padding-block:22px;overflow:hidden}
+.band .row{display:flex;gap:48px;white-space:nowrap;font-family:var(--fd);font-size:clamp(18px,2vw,24px);animation:mq 38s linear infinite;width:max-content}
+.band .row span::after{content:"✦";margin-left:48px;color:var(--acc)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.band .row{animation:none}*{transition:none!important}}
+/* services */
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px}
+.head .lead{justify-self:end}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;display:flex;flex-direction:column;gap:10px;transition:border-color .25s,transform .25s}
+.svc:hover{border-color:var(--acc);transform:translateY(-3px)}
+.svc-ic{width:48px;height:48px;border-radius:calc(var(--r) - 2px);background:var(--soft);color:var(--acc);display:grid;place-items:center;margin-bottom:6px}
+.svc h3{font-size:22px}
+.svc p{color:var(--mut);font-size:15.5px;flex:1}
+.svc a{font-weight:600;font-size:14.5px;color:var(--acc);margin-top:6px}
+/* about */
+.about{background:var(--soft)}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,80px);align-items:center}
+.portrait{aspect-ratio:4/5;max-width:100%;border-radius:0;background:linear-gradient(170deg,#D9CFB8,#16213A);position:relative;display:grid;place-items:center;color:var(--deep-ink)}
+.portrait .initials{font-family:var(--fd);font-size:clamp(80px,12vw,150px);opacity:.35;font-weight:var(--dw)}
+.sig{position:absolute;left:24px;bottom:24px;right:24px;background:var(--surface);color:var(--ink);border-radius:var(--r);padding:16px 18px;font-size:14px;color:var(--mut)}
+.sig b{display:block;color:var(--ink);font-family:var(--fd);font-weight:var(--dw);font-size:18px}
+.creds{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.creds li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink)}
+.creds svg{color:var(--acc);flex-shrink:0;margin-top:3px}
+/* steps */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;counter-reset:s}
+.steps li{border-top:2px solid var(--ink);padding-top:22px}
+.sn{font-family:var(--fd);font-size:15px;color:var(--acc);font-weight:var(--dw);font-variant-numeric:tabular-nums}
+.steps h3{font-size:21px;margin:10px 0 8px}
+.steps p{color:var(--mut);font-size:15px}
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.tq{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:16px}
+.stars{color:var(--acc);letter-spacing:3px;font-size:14px}
+.tq blockquote{font-size:17px;line-height:1.55;flex:1}
+.tq figcaption{display:flex;gap:12px;align-items:center;font-size:14px}
+.tq small{display:block;color:var(--mut);font-size:13px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--soft);color:var(--acc);display:grid;place-items:center;font-weight:700;font-family:var(--fd)}
+.note{font-size:13px;color:var(--mut);margin-top:18px}
+/* faq + cta */
+.faqwrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px)}
+details{border-bottom:1px solid var(--line);padding-block:20px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-family:var(--fd);font-weight:var(--dw);font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--acc);font-size:24px;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mut);margin-top:10px;max-width:62ch}
+.contact{background:var(--deep);color:var(--deep-ink)}
+.contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.contact h2{color:var(--deep-ink)}
+.contact .lead{color:color-mix(in srgb,var(--deep-ink) 75%,transparent)}
+.info{display:grid;gap:16px}
+.info div{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border:1px solid color-mix(in srgb,var(--deep-ink) 20%,transparent);border-radius:var(--r)}
+.info svg{color:var(--acc);flex-shrink:0;margin-top:2px}
+.info b{display:block}
+.info span{font-size:14px;opacity:.75}
+footer{background:var(--deep);color:color-mix(in srgb,var(--deep-ink) 70%,transparent);border-top:1px solid color-mix(in srgb,var(--deep-ink) 15%,transparent);font-size:13.5px;padding-block:28px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--acc);font-weight:600}
+.wf{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);z-index:30;transition:transform .2s}
+.wf:hover{transform:scale(1.07)}.wf svg{width:30px;height:30px}
+
+.art img.kb,.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art img.kb{animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.art .glyph{display:none}
+.art::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.35));z-index:1}
+.art::after{display:none}
+.portrait{overflow:hidden}
+.sig{z-index:2;box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+.gallery{padding-block:0 clamp(64px,9vw,112px)}
+.bento{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
+.bento figure{position:relative;overflow:hidden;border-radius:var(--r);margin:0}
+.bento .b0{grid-row:span 2}
+.bento .b3{grid-column:span 2}
+.bento img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.bento figure:hover img{transform:scale(1.06)}
+.bento figcaption{position:absolute;left:14px;bottom:14px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);color:var(--ink);font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px}
+.hero h1,.hero .lead,.hero .ctas,.hero .chips,.hero .stats,.hero .eyebrow{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .lead{animation-delay:.12s}.hero .ctas{animation-delay:.22s}.hero .chips{animation-delay:.3s}.hero .stats{animation-delay:.38s}
+.float{animation:up 1s .5s cubic-bezier(.2,.7,.2,1) both,bob 6s 1.5s ease-in-out infinite}
+.f2{animation-delay:.7s,2.4s}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.svc{position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--acc) 12%,transparent),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.svc:hover::before{opacity:1}
+nav.scrolled{box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--acc);width:0;z-index:40}
+@media (prefers-reduced-motion:reduce){.art img.kb,.float,.hero *{animation:none!important}.js .reveal{opacity:1;transform:none}}
+@media (max-width:960px){.bento{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}.bento .b0{grid-row:span 1;grid-column:span 2}.bento .b3{grid-column:span 2}}
+.mark{font-size:12px;width:44px;letter-spacing:.04em}.grid{border-top:1px solid var(--ink)}.grid .svc{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:30px 26px 30px 0}.grid .svc:hover{transform:none}.svc-ic{background:transparent;border:1px solid var(--line)}.eyebrow{font-variant:small-caps;text-transform:lowercase;letter-spacing:.14em;font-size:15px}.art::after{mix-blend-mode:normal;z-index:0}.btn{letter-spacing:.04em}
+@media (max-width:960px){.menu{display:none}.hero .wrap,.about .wrap,.contact .wrap,.faqwrap,.head{grid-template-columns:1fr}.head .lead{justify-self:start}.art{max-width:440px;width:100%;margin-inline:auto}.portrait{max-width:440px;width:100%}.grid,.tgrid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.f1{left:-2%}.f2{right:-2%}}
+@media (max-width:600px){.grid,.tgrid,.steps,.creds{grid-template-columns:1fr}nav .btn span{display:none}body{font-size:16px}.float{max-width:200px;padding:10px 12px}}
+</style></head><body>
+<nav><div class="wrap">
+<a href="#inicio" class="brand"><span class="mark">L&O</span><span>Ledesma & Ortiz<small>Abogados</small></span></a>
+<div class="menu"><a href="#servicios">Áreas de práctica</a><a href="#nosotros">El estudio</a><a href="#proceso">Cómo trabajamos</a><a href="#faq">Preguntas</a><a href="#contacto">Consultas</a></div>
+<a class="btn" href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span>Consultar</span></a>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+<div>
+<span class="eyebrow">Estudio jurídico · Córdoba</span>
+<h1>Defendemos tus derechos con <em>claridad</em> y compromiso.</h1>
+<p class="lead">Asesoramiento y representación en derecho laboral, familia, sucesiones y accidentes. Te explicamos tu caso en términos simples y te decimos cuáles son tus opciones.</p>
+<div class="ctas"><a class="btn" href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Solicitar primera consulta</a><a class="btn ghost" href="#servicios">Áreas de práctica</a></div>
+<div class="chips"><span class="chip">Primera consulta orientativa</span><span class="chip">Atención presencial y virtual</span><span class="chip">Honorarios claros</span></div>
+<div class="stats"><div class="stat"><b data-c="+20">+20</b><span>años de trayectoria</span></div><div class="stat"><b data-c="+1.500">+1.500</b><span>casos resueltos</span></div><div class="stat"><b data-c="4">4</b><span>áreas de práctica</span></div></div>
+</div>
+<div style="position:relative">
+<div class="art"><img class="kb" src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1200&q=80" alt="Biblioteca jurídica" loading="eager"><div class="glyph"><svg viewBox="0 0 24 24" width="200" height="200" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0L6 7ZM18 7l-3 7a3 3 0 0 0 6 0l-3-7Z"/></svg></div></div>
+<div class="float f1"><span class="fi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3Z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span><span><b>Tu caso, por escrito</b>Sin letra chica</span></div>
+<div class="float f2"><span class="fi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><b>Respuesta</b>En menos de 24 h</span></div>
+</div>
+</div></header>
+
+<div class="band" aria-hidden="true"><div class="row"><span>Derecho laboral</span><span>Familia</span><span>Sucesiones</span><span>Accidentes de tránsito</span><span>Daños y perjuicios</span><span>Contratos</span><span>Derecho laboral</span><span>Familia</span><span>Sucesiones</span><span>Accidentes de tránsito</span><span>Daños y perjuicios</span><span>Contratos</span><span>Derecho laboral</span><span>Familia</span><span>Sucesiones</span><span>Accidentes de tránsito</span><span>Daños y perjuicios</span><span>Contratos</span><span>Derecho laboral</span><span>Familia</span><span>Sucesiones</span><span>Accidentes de tránsito</span><span>Daños y perjuicios</span><span>Contratos</span></div></div>
+
+<section id="servicios"><div class="wrap">
+<div class="head"><div><span class="eyebrow">Áreas de práctica</span><h2>Te asesoramos en los temas que más importan</h2></div><p class="lead">Cada caso lo lleva un abogado del estudio, que te informa en cada etapa del proceso.</p></div>
+<div class="grid"><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></div><h3>Derecho laboral</h3><p>Despidos, indemnizaciones, trabajo no registrado y accidentes laborales.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener">Consultar sobre este tema <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5a3 3 0 0 1 0 6M21 20c0-3-1.7-5-4-5.7"/></svg></div><h3>Familia</h3><p>Divorcios, alimentos, régimen de comunicación y acuerdos.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener">Consultar sobre este tema <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7v9H3v-9Z"/><path d="M9 20v-6h6v6"/></svg></div><h3>Sucesiones</h3><p>Declaratoria de herederos y división de bienes, con trámites ágiles.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener">Consultar sobre este tema <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16h14M6 16l1.5-5h9L18 16M5 16v3M19 16v3"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg></div><h3>Accidentes de tránsito</h3><p>Reclamos a aseguradoras y daños por accidentes.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener">Consultar sobre este tema <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0L6 7ZM18 7l-3 7a3 3 0 0 0 6 0l-3-7Z"/></svg></div><h3>Daños y perjuicios</h3><p>Reclamos por daños materiales, morales y responsabilidad civil.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener">Consultar sobre este tema <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3Z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></div><h3>Contratos</h3><p>Redacción y revisión de contratos de alquiler, compraventa y servicios.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener">Consultar sobre este tema <span aria-hidden="true">→</span></a></article></div>
+</div></section>
+
+
+<section class="gallery"><div class="wrap">
+<div class="bento"><figure class="b0 reveal"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=80" alt="Justicia" loading="lazy"><figcaption>Justicia</figcaption></figure><figure class="b1 reveal"><img src="https://images.unsplash.com/photo-1758518731462-d091b0b4ed0d?auto=format&fit=crop&w=1000&q=80" alt="Acuerdos" loading="lazy"><figcaption>Acuerdos</figcaption></figure><figure class="b2 reveal"><img src="https://images.unsplash.com/photo-1755551636128-2385f552d7ec?auto=format&fit=crop&w=1000&q=80" alt="Sala de reuniones" loading="lazy"><figcaption>Sala de reuniones</figcaption></figure><figure class="b3 reveal"><img src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?auto=format&fit=crop&w=1000&q=80" alt="Respaldo legal" loading="lazy"><figcaption>Respaldo legal</figcaption></figure></div>
+</div></section>
+<section class="about" id="nosotros"><div class="wrap">
+<div class="portrait reveal"><img src="https://images.unsplash.com/photo-1585240975858-7264fd020798?auto=format&fit=crop&w=900&q=80" alt="Dra. Laura Ledesma · Dr. Martín Ortiz" loading="lazy"><div class="sig"><b>Dra. Laura Ledesma · Dr. Martín Ortiz</b>Abogados · Matrícula Colegio de Abogados de Córdoba</div></div>
+<div><span class="eyebrow">El estudio</span><h2>Un estudio cercano, que te habla claro</h2><p class="lead">Sabemos que un problema legal genera incertidumbre. Por eso te explicamos tu situación sin tecnicismos, te decimos qué esperar y te mantenemos informado durante todo el proceso.</p><ul class="creds"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Más de 20 años de trayectoria</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Abogados matriculados</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Informes de avance periódicos</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Atención virtual en toda la provincia</span></li></ul></div>
+</div></section>
+
+<section id="proceso"><div class="wrap">
+<span class="eyebrow">Cómo trabajamos</span><h2>Tu consulta, paso a paso</h2>
+<ol class="steps"><li class="reveal"><span class="sn">01</span><h3>Nos contás tu caso</h3><p>Por WhatsApp o en una reunión, con total confidencialidad.</p></li><li class="reveal"><span class="sn">02</span><h3>Análisis</h3><p>Estudiamos tu situación y la documentación.</p></li><li class="reveal"><span class="sn">03</span><h3>Propuesta</h3><p>Te explicamos opciones, plazos y honorarios por escrito.</p></li><li class="reveal"><span class="sn">04</span><h3>Seguimiento</h3><p>Te informamos cada avance hasta cerrar tu caso.</p></li></ol>
+</div></section>
+
+<section class="about" id="opiniones"><div class="wrap" style="display:block">
+<span class="eyebrow">Testimonios</span><h2>Lo que dicen nuestros clientes</h2>
+<div class="tgrid"><figure class="tq reveal"><div class="stars">★★★★★</div><blockquote>“Me despidieron sin causa y no sabía qué hacer. Me explicaron todo con mucha claridad y lograron un buen acuerdo.”</blockquote><figcaption><span class="av">R</span><span><b>Ricardo P.</b><small>Derecho laboral</small></span></figcaption></figure><figure class="tq reveal"><div class="stars">★★★★★</div><blockquote>“La sucesión de mis padres se resolvió mucho más rápido de lo que esperaba.”</blockquote><figcaption><span class="av">A</span><span><b>Andrea C.</b><small>Sucesiones</small></span></figcaption></figure><figure class="tq reveal"><div class="stars">★★★★★</div><blockquote>“Profesionales y humanos. Siempre me respondieron cuando lo necesité.”</blockquote><figcaption><span class="av">P</span><span><b>Pablo G.</b><small>Accidente de tránsito</small></span></figcaption></figure></div>
+</div></section>
+
+<section id="faq"><div class="wrap faqwrap">
+<div><span class="eyebrow">Preguntas frecuentes</span><h2>Preguntas frecuentes</h2><p class="lead">¿No encontrás tu respuesta? Escribinos y te respondemos a la brevedad.</p></div>
+<div><details open><summary>¿La primera consulta tiene costo?</summary><p>Ofrecemos una primera consulta orientativa. Consultanos las condiciones al escribirnos.</p></details><details><summary>¿Puedo hacer la consulta de forma virtual?</summary><p>Sí, atendemos por videollamada en toda la provincia.</p></details><details><summary>¿Cómo se cobran los honorarios?</summary><p>Depende del tipo de caso. Te los informamos por escrito antes de empezar.</p></details><details><summary>¿Cuánto demora un juicio laboral?</summary><p>Depende de cada caso. En la consulta te damos una estimación realista.</p></details></div>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+<div><span class="eyebrow">Contacto</span><h2>Contanos tu caso</h2><p class="lead">Escribinos por WhatsApp. Tu consulta es confidencial y te respondemos en menos de 24 horas hábiles.</p><div class="ctas" style="margin-top:30px"><a class="btn" href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Solicitar primera consulta</a></div></div>
+<div class="info">
+<div><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg><span><b>Calle Ejemplo 150, Piso 4, Centro</b><span>Córdoba Capital</span></span></div>
+<div><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Lunes a viernes 9 a 18 h</b><span>Reuniones con cita previa</span></span></div>
+<div><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg><span><b>Consultas virtuales</b><span>En toda la provincia</span></span></div>
+</div>
+</div></section>
+<footer><div class="wrap"><span>© 2026 Ledesma & Ortiz · Todos los derechos reservados</span><span>Diseño y desarrollo: <a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener">Pixel Studio</a></span></div></footer>
+<a class="wf" href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20jur%C3%ADdico%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20jur%C3%ADdico." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+<div class="progress" aria-hidden="true"></div>
+<script>
+document.documentElement.classList.add('js');
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+var nav=document.querySelector('nav'),bar=document.querySelector('.progress');
+addEventListener('scroll',function(){var h=document.documentElement;nav.classList.toggle('scrolled',scrollY>10);bar.style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('.svc').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var b=e.target,t=b.dataset.c,m=t.match(/^([^0-9]*)([0-9][0-9.]*)(.*)$/);so.unobserve(b);if(!m)return;var n=parseFloat(m[2].replace(/\./g,'')),st=performance.now();function f(now){var p=Math.min(1,(now-st)/1400),v=Math.round(n*(1-Math.pow(1-p,3)));b.textContent=m[1]+v.toLocaleString('es-AR')+m[3];if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})});
+document.querySelectorAll('.stat b').forEach(function(b){so.observe(b)});
+})();
+</script>
+</body></html>

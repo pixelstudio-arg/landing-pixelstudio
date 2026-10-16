@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cifra · Estudio contable</title>
+<meta name="description" content="Estudio contable para monotributistas, autónomos y pymes: impuestos, sueldos, sociedades y asesoramiento.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Precisión: blanco papel, verde banca profundo y amarillo resaltador; sans técnica con cifras tabulares. */
+:root{--bg:#FAFAF7;--surface:#FFFFFF;--ink:#10241C;--mut:#566760;--line:#DFE5E0;--acc:#1F6B4A;--acc-ink:#FFFFFF;--deep:#10241C;--deep-ink:#ECF3EE;--soft:#EAF1EC;
+--fd:'Sora',system-ui,sans-serif;--fb:'IBM Plex Sans',system-ui,sans-serif;--r:10px;--dw:600;color-scheme:light}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--fd);font-weight:var(--dw);line-height:1.08;text-wrap:balance;letter-spacing:-0.025em}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(64px,9vw,112px)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
+h2{font-size:clamp(30px,4.4vw,50px);margin-bottom:16px}
+.lead{color:var(--mut);font-size:clamp(17px,1.6vw,19px);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:var(--acc-ink);font-weight:600;font-size:15px;padding:15px 26px;border-radius:var(--r);border:1.5px solid var(--acc);transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}
+.btn svg{width:19px;height:19px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -10px var(--acc)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);box-shadow:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+/* demo ribbon */
+.ribbon{background:#111;color:#eee;font:500 13px/1.4 system-ui,sans-serif;text-align:center;padding:9px 16px}
+.ribbon a{color:#FF8A5B;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--fd);font-weight:var(--dw);font-size:21px;letter-spacing:-0.025em}
+.mark{width:38px;height:38px;border-radius:8px;background:var(--deep);color:var(--deep-ink);display:grid;place-items:center;font-size:17px;flex-shrink:0}
+.brand small{display:block;font-family:var(--fb);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-top:2px}
+.menu{display:flex;gap:28px;font-size:15px;color:var(--mut);font-weight:500}
+.menu a:hover{color:var(--ink)}
+nav .btn{padding:11px 18px;font-size:14px}
+/* hero */
+.hero{padding-block:clamp(48px,7vw,96px);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(38px,5.2vw,64px);margin:6px 0 22px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero p.lead{margin-bottom:32px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:clamp(20px,4vw,44px);margin-top:44px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.stat b{display:block;font-family:var(--fd);font-weight:var(--dw);font-size:clamp(26px,3vw,34px);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--mut)}
+.art{position:relative;aspect-ratio:1/1.08;max-width:100%;border-radius:16px;overflow:hidden;background:linear-gradient(150deg,#ECF3EE 0%,#9CC2AE 45%,#10241C 100%);isolation:isolate}
+.art .glyph{position:absolute;inset:0;display:grid;place-items:center;color:var(--deep-ink);opacity:.9}
+.art .glyph svg{width:42%;height:auto;stroke-width:.9}
+.art::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px) 0 0/100% 32px,linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px) 0 0/32px 100%;mix-blend-mode:soft-light;z-index:-1}
+.float{position:absolute;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:calc(var(--r) + 4px);padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 24px 50px -24px rgba(0,0,0,.35);font-size:13px;max-width:240px}
+.float b{display:block;font-size:15px;font-family:var(--fd);font-weight:var(--dw)}
+.float .fi{width:38px;height:38px;border-radius:calc(var(--r) - 2px);background:var(--soft);color:var(--acc);display:grid;place-items:center;flex-shrink:0}
+.f1{top:9%;left:-5%}.f2{bottom:9%;right:-4%}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--mut);background:var(--surface)}
+/* marquee band */
+.band{background:var(--deep);color:var(--deep-ink);padding-block:22px;overflow:hidden}
+.band .row{display:flex;gap:48px;white-space:nowrap;font-family:var(--fd);font-size:clamp(18px,2vw,24px);animation:mq 38s linear infinite;width:max-content}
+.band .row span::after{content:"✦";margin-left:48px;color:var(--acc)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.band .row{animation:none}*{transition:none!important}}
+/* services */
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px}
+.head .lead{justify-self:end}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;display:flex;flex-direction:column;gap:10px;transition:border-color .25s,transform .25s}
+.svc:hover{border-color:var(--acc);transform:translateY(-3px)}
+.svc-ic{width:48px;height:48px;border-radius:calc(var(--r) - 2px);background:var(--soft);color:var(--acc);display:grid;place-items:center;margin-bottom:6px}
+.svc h3{font-size:22px}
+.svc p{color:var(--mut);font-size:15.5px;flex:1}
+.svc a{font-weight:600;font-size:14.5px;color:var(--acc);margin-top:6px}
+/* about */
+.about{background:var(--soft)}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,80px);align-items:center}
+.portrait{aspect-ratio:4/5;max-width:100%;border-radius:16px;background:linear-gradient(160deg,#D7E6DC,#1F6B4A);position:relative;display:grid;place-items:center;color:var(--deep-ink)}
+.portrait .initials{font-family:var(--fd);font-size:clamp(80px,12vw,150px);opacity:.35;font-weight:var(--dw)}
+.sig{position:absolute;left:24px;bottom:24px;right:24px;background:var(--surface);color:var(--ink);border-radius:var(--r);padding:16px 18px;font-size:14px;color:var(--mut)}
+.sig b{display:block;color:var(--ink);font-family:var(--fd);font-weight:var(--dw);font-size:18px}
+.creds{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.creds li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink)}
+.creds svg{color:var(--acc);flex-shrink:0;margin-top:3px}
+/* steps */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;counter-reset:s}
+.steps li{border-top:2px solid var(--ink);padding-top:22px}
+.sn{font-family:var(--fd);font-size:15px;color:var(--acc);font-weight:var(--dw);font-variant-numeric:tabular-nums}
+.steps h3{font-size:21px;margin:10px 0 8px}
+.steps p{color:var(--mut);font-size:15px}
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.tq{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:16px}
+.stars{color:var(--acc);letter-spacing:3px;font-size:14px}
+.tq blockquote{font-size:17px;line-height:1.55;flex:1}
+.tq figcaption{display:flex;gap:12px;align-items:center;font-size:14px}
+.tq small{display:block;color:var(--mut);font-size:13px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--soft);color:var(--acc);display:grid;place-items:center;font-weight:700;font-family:var(--fd)}
+.note{font-size:13px;color:var(--mut);margin-top:18px}
+/* faq + cta */
+.faqwrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px)}
+details{border-bottom:1px solid var(--line);padding-block:20px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-family:var(--fd);font-weight:var(--dw);font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--acc);font-size:24px;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mut);margin-top:10px;max-width:62ch}
+.contact{background:var(--deep);color:var(--deep-ink)}
+.contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.contact h2{color:var(--deep-ink)}
+.contact .lead{color:color-mix(in srgb,var(--deep-ink) 75%,transparent)}
+.info{display:grid;gap:16px}
+.info div{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border:1px solid color-mix(in srgb,var(--deep-ink) 20%,transparent);border-radius:var(--r)}
+.info svg{color:var(--acc);flex-shrink:0;margin-top:2px}
+.info b{display:block}
+.info span{font-size:14px;opacity:.75}
+footer{background:var(--deep);color:color-mix(in srgb,var(--deep-ink) 70%,transparent);border-top:1px solid color-mix(in srgb,var(--deep-ink) 15%,transparent);font-size:13.5px;padding-block:28px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--acc);font-weight:600}
+.wf{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);z-index:30;transition:transform .2s}
+.wf:hover{transform:scale(1.07)}.wf svg{width:30px;height:30px}
+
+.art img.kb,.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art img.kb{animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.art .glyph{display:none}
+.art::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.35));z-index:1}
+.art::after{display:none}
+.portrait{overflow:hidden}
+.sig{z-index:2;box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+.gallery{padding-block:0 clamp(64px,9vw,112px)}
+.bento{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
+.bento figure{position:relative;overflow:hidden;border-radius:var(--r);margin:0}
+.bento .b0{grid-row:span 2}
+.bento .b3{grid-column:span 2}
+.bento img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.bento figure:hover img{transform:scale(1.06)}
+.bento figcaption{position:absolute;left:14px;bottom:14px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);color:var(--ink);font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px}
+.hero h1,.hero .lead,.hero .ctas,.hero .chips,.hero .stats,.hero .eyebrow{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .lead{animation-delay:.12s}.hero .ctas{animation-delay:.22s}.hero .chips{animation-delay:.3s}.hero .stats{animation-delay:.38s}
+.float{animation:up 1s .5s cubic-bezier(.2,.7,.2,1) both,bob 6s 1.5s ease-in-out infinite}
+.f2{animation-delay:.7s,2.4s}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.svc{position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--acc) 12%,transparent),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.svc:hover::before{opacity:1}
+nav.scrolled{box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--acc);width:0;z-index:40}
+@media (prefers-reduced-motion:reduce){.art img.kb,.float,.hero *{animation:none!important}.js .reveal{opacity:1;transform:none}}
+@media (max-width:960px){.bento{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}.bento .b0{grid-row:span 1;grid-column:span 2}.bento .b3{grid-column:span 2}}
+.hero h1 em{background:linear-gradient(transparent 60%,#F2E27A 60%);color:inherit}.art::after{mix-blend-mode:normal;z-index:0}.stat b{font-family:'IBM Plex Sans',system-ui,sans-serif;font-weight:600}
+@media (max-width:960px){.menu{display:none}.hero .wrap,.about .wrap,.contact .wrap,.faqwrap,.head{grid-template-columns:1fr}.head .lead{justify-self:start}.art{max-width:440px;width:100%;margin-inline:auto}.portrait{max-width:440px;width:100%}.grid,.tgrid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.f1{left:-2%}.f2{right:-2%}}
+@media (max-width:600px){.grid,.tgrid,.steps,.creds{grid-template-columns:1fr}nav .btn span{display:none}body{font-size:16px}.float{max-width:200px;padding:10px 12px}}
+</style></head><body>
+<nav><div class="wrap">
+<a href="#inicio" class="brand"><span class="mark">C</span><span>Cifra<small>Estudio contable</small></span></a>
+<div class="menu"><a href="#servicios">Servicios</a><a href="#nosotros">El estudio</a><a href="#proceso">Cómo empezamos</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></div>
+<a class="btn" href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span>Hablar con un contador</span></a>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+<div>
+<span class="eyebrow">Estudio contable · Córdoba</span>
+<h1>Tus impuestos <em>en orden</em>, para que te ocupes de tu negocio.</h1>
+<p class="lead">Acompañamos a monotributistas, profesionales y pymes con impuestos, sueldos y asesoramiento. Respuestas rápidas, vencimientos al día y todo explicado en simple.</p>
+<div class="ctas"><a class="btn" href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Pedir asesoramiento</a><a class="btn ghost" href="#servicios">Ver servicios</a></div>
+<div class="chips"><span class="chip">Monotributo y autónomos</span><span class="chip">Pymes y sociedades</span><span class="chip">Atención 100% online</span></div>
+<div class="stats"><div class="stat"><b data-c="+300">+300</b><span>clientes activos</span></div><div class="stat"><b data-c="0">0</b><span>vencimientos perdidos</span></div><div class="stat"><b data-c="24 h">24 h</b><span>tiempo de respuesta</span></div></div>
+</div>
+<div style="position:relative">
+<div class="art"><img class="kb" src="https://images.unsplash.com/photo-1765371512336-99c2b1c6975f?auto=format&fit=crop&w=1200&q=80" alt="Oficina del estudio contable" loading="eager"><div class="glyph"><svg viewBox="0 0 24 24" width="200" height="200" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></div></div>
+<div class="float f1"><span class="fi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><b>Alertas de vencimiento</b>Te avisamos antes</span></div>
+<div class="float f2"><span class="fi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span><b>Reporte mensual</b>Tus números claros</span></div>
+</div>
+</div></header>
+
+<div class="band" aria-hidden="true"><div class="row"><span>Monotributo</span><span>Ganancias</span><span>IVA</span><span>Sueldos</span><span>Sociedades</span><span>Ingresos Brutos</span><span>Planificación fiscal</span><span>Monotributo</span><span>Ganancias</span><span>IVA</span><span>Sueldos</span><span>Sociedades</span><span>Ingresos Brutos</span><span>Planificación fiscal</span><span>Monotributo</span><span>Ganancias</span><span>IVA</span><span>Sueldos</span><span>Sociedades</span><span>Ingresos Brutos</span><span>Planificación fiscal</span><span>Monotributo</span><span>Ganancias</span><span>IVA</span><span>Sueldos</span><span>Sociedades</span><span>Ingresos Brutos</span><span>Planificación fiscal</span></div></div>
+
+<section id="servicios"><div class="wrap">
+<div class="head"><div><span class="eyebrow">Servicios</span><h2>Contabilidad clara para cada etapa de tu negocio</h2></div><p class="lead">Elegí el servicio que necesitás hoy. Si crecés, crecemos con vos.</p></div>
+<div class="grid"><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9c-.5-1-1.6-1.5-3-1.5-1.8 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.5 0-2.6-.6-3.1-1.6M12 6v1.5M12 16.5V18"/></svg></div><h3>Monotributo</h3><p>Alta, recategorización y control de tus pagos para que no te lleguen sorpresas.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener">Consultar <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3Z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></div><h3>Autónomos y Ganancias</h3><p>Liquidación de Ganancias, Bienes Personales e IVA para profesionales.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener">Consultar <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5a3 3 0 0 1 0 6M21 20c0-3-1.7-5-4-5.7"/></svg></div><h3>Sueldos y cargas sociales</h3><p>Liquidación de sueldos, F.931 y altas de empleados.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener">Consultar <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13M9 21v-6h6v6M8 11h.01M16 11h.01"/></svg></div><h3>Sociedades</h3><p>Constitución de SAS y SRL, balances y libros contables.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener">Consultar <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Planificación fiscal</h3><p>Analizamos tu situación para que pagues lo justo, de forma legal.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener">Consultar <span aria-hidden="true">→</span></a></article><article class="svc reveal"><div class="svc-ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></div><h3>Ingresos Brutos</h3><p>Inscripción, declaraciones y convenio multilateral.</p><a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener">Consultar <span aria-hidden="true">→</span></a></article></div>
+</div></section>
+
+
+<section class="gallery"><div class="wrap">
+<div class="bento"><figure class="b0 reveal"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80" alt="Planificación" loading="lazy"><figcaption>Planificación</figcaption></figure><figure class="b1 reveal"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80" alt="Impuestos al día" loading="lazy"><figcaption>Impuestos al día</figcaption></figure><figure class="b2 reveal"><img src="https://images.unsplash.com/photo-1772588627327-1eeddcf73c11?auto=format&fit=crop&w=1000&q=80" alt="Documentación" loading="lazy"><figcaption>Documentación</figcaption></figure><figure class="b3 reveal"><img src="https://images.unsplash.com/photo-1626266061368-46a8f578ddd6?auto=format&fit=crop&w=1000&q=80" alt="Liquidaciones" loading="lazy"><figcaption>Liquidaciones</figcaption></figure></div>
+</div></section>
+<section class="about" id="nosotros"><div class="wrap">
+<div class="portrait reveal"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" alt="Equipo Cifra" loading="lazy"><div class="sig"><b>Equipo Cifra</b>Contadores públicos · Matrícula CPCE Córdoba</div></div>
+<div><span class="eyebrow">El estudio</span><h2>Contadores que responden</h2><p class="lead">Sabemos que lo más frustrante es no tener respuesta. Por eso tenés un contador asignado, un canal directo por WhatsApp y un resumen mensual de tu situación.</p><ul class="creds"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Contadores matriculados</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Contador asignado a tu cuenta</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Recordatorios de vencimientos</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Atención online en todo el país</span></li></ul></div>
+</div></section>
+
+<section id="proceso"><div class="wrap">
+<span class="eyebrow">Cómo empezamos</span><h2>Empezar con nosotros es simple</h2>
+<ol class="steps"><li class="reveal"><span class="sn">01</span><h3>Diagnóstico</h3><p>Revisamos tu situación fiscal actual sin costo.</p></li><li class="reveal"><span class="sn">02</span><h3>Propuesta</h3><p>Te enviamos un abono mensual claro, sin extras ocultos.</p></li><li class="reveal"><span class="sn">03</span><h3>Puesta al día</h3><p>Regularizamos lo pendiente y ordenamos tu información.</p></li><li class="reveal"><span class="sn">04</span><h3>Acompañamiento</h3><p>Mes a mes, con vencimientos al día y reportes.</p></li></ol>
+</div></section>
+
+<section class="about" id="opiniones"><div class="wrap" style="display:block">
+<span class="eyebrow">Testimonios</span><h2>Clientes que duermen tranquilos</h2>
+<div class="tgrid"><figure class="tq reveal"><div class="stars">★★★★★</div><blockquote>“Antes me enteraba de las deudas cuando ya era tarde. Ahora tengo todo al día y me avisan antes de cada vencimiento.”</blockquote><figcaption><span class="av">F</span><span><b>Federico N.</b><small>Monotributista</small></span></figcaption></figure><figure class="tq reveal"><div class="stars">★★★★★</div><blockquote>“Nos armaron la SAS en tiempo récord y nos liquidan los sueldos sin errores.”</blockquote><figcaption><span class="av">R</span><span><b>Romina y Matías</b><small>Pyme</small></span></figcaption></figure><figure class="tq reveal"><div class="stars">★★★★★</div><blockquote>“Responden rápido y explican todo en simple. Un antes y un después.”</blockquote><figcaption><span class="av">L</span><span><b>Laura K.</b><small>Profesional autónoma</small></span></figcaption></figure></div>
+</div></section>
+
+<section id="faq"><div class="wrap faqwrap">
+<div><span class="eyebrow">Preguntas frecuentes</span><h2>Preguntas frecuentes</h2><p class="lead">¿No encontrás tu respuesta? Escribinos y te respondemos a la brevedad.</p></div>
+<div><details open><summary>¿Atienden de forma online?</summary><p>Sí, trabajamos 100% online con clientes de todo el país, y también recibimos en el estudio.</p></details><details><summary>¿Cuánto cuesta el abono mensual?</summary><p>Depende de tu actividad y volumen. Te enviamos una propuesta clara después del diagnóstico.</p></details><details><summary>Tengo deudas con ARCA, ¿me pueden ayudar?</summary><p>Sí, analizamos tu situación y te proponemos un plan para regularizarla.</p></details><details><summary>¿Me ayudan a pasar de monotributo a responsable inscripto?</summary><p>Sí, te asesoramos en el cambio y en la planificación previa.</p></details></div>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+<div><span class="eyebrow">Contacto</span><h2>Ordená tus números hoy</h2><p class="lead">Escribinos por WhatsApp y pedí tu diagnóstico sin costo.</p><div class="ctas" style="margin-top:30px"><a class="btn" href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Pedir asesoramiento</a></div></div>
+<div class="info">
+<div><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg><span><b>Av. Ejemplo 700, Oficina 3B</b><span>Córdoba Capital</span></span></div>
+<div><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Lunes a viernes 9 a 18 h</b><span>Respuesta en 24 h hábiles</span></span></div>
+<div><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg><span><b>Atención online</b><span>En todo el país</span></span></div>
+</div>
+</div></section>
+<footer><div class="wrap"><span>© 2026 Cifra · Todos los derechos reservados</span><span>Diseño y desarrollo: <a href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener">Pixel Studio</a></span></div></footer>
+<a class="wf" href="https://wa.me/5493513992666?text=Hola%20Franco%21%20Vi%20la%20demo%20de%20Estudio%20contable%20en%20tu%20p%C3%A1gina%20y%20quiero%20una%20web%20as%C3%AD%20para%20mi%20estudio%20contable." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+<div class="progress" aria-hidden="true"></div>
+<script>
+document.documentElement.classList.add('js');
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+var nav=document.querySelector('nav'),bar=document.querySelector('.progress');
+addEventListener('scroll',function(){var h=document.documentElement;nav.classList.toggle('scrolled',scrollY>10);bar.style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('.svc').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var b=e.target,t=b.dataset.c,m=t.match(/^([^0-9]*)([0-9][0-9.]*)(.*)$/);so.unobserve(b);if(!m)return;var n=parseFloat(m[2].replace(/\./g,'')),st=performance.now();function f(now){var p=Math.min(1,(now-st)/1400),v=Math.round(n*(1-Math.pow(1-p,3)));b.textContent=m[1]+v.toLocaleString('es-AR')+m[3];if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})});
+document.querySelectorAll('.stat b').forEach(function(b){so.observe(b)});
+})();
+</script>
+</body></html>
